@@ -1,19 +1,20 @@
 !-- Xft settings -- !
-Xft.dpi:        96
+Xft.dpi:        180
 Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintfull
 Xft.antialiasing: false
 
 ! -- Fonts -- !
-urxvt.font:xft:DejaVu Sans Mono:size=10
-urxvt.boldfont:xft:DejaVu Sans Mono:size=10
+urxvt.font:xft:DejaVu Sans Mono:size=8
+urxvt.boldfont:xft:DejaVu Sans Mono:size=8
 
 ! -- URxvt settings -- !
 
 urxvt*geometry: 80x30
 !urxvt.font: 9x15
-urxvt*background:       #212629
+!urxvt*background:       #212629
+urxvt*background:       #000000
 urxvt*foreground:       #FFFFFF
 urxvt*scrollBar:        false
 urxvt*matcher.button:   1

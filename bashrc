@@ -41,32 +41,10 @@ alias l='ls -CF'
 # Bash Prompt
 PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[31;1m\]\w\[\033[m\]\$ "
 
+
 # Export environmental variables
 export EDITOR=vim
-
-# Pacman/Yaourt
-if command -v 'pacman' >/dev/null $$ [[ $?==0 ]]; then
-    alias install='sudo pacman -S '
-    alias fupdate='yaourt -Syyua --devel'
-    alias pacdate='sudo pacman -Syu'
-    alias search='yaourt -Ss '
-    alias paccache='paccache -rv'
-    alias remorphans='sudo pacman -Rs $(pacman -Qtdq)'
-fi
-
-# Debian
-if command -v 'apt-get' >/dev/null && [[ $?==0 ]]; then
-    alias install='sudo apt-get install '
-    alias fupdate='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
-    alias search='sudo apt-cache search '
-fi
-
-# RHEL
-if command -v 'yum' >/dev/null && [[ $?==0 ]]; then
-    alias install='sudo yum install '
-    alias fupdate='sudo yum upgrade'
-    alias search='sudo yum search '
-fi
+export BROWSER=firefox
 
 
 # IP
