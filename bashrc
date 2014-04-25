@@ -76,4 +76,6 @@ extract () {
 }
 
 # Source external file
-. ~/.customrc
+if [[ -f ~/.customrc ]]; then
+    . ~/.customrc
+fi
