@@ -7,19 +7,32 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+### HISTORY OPTIONS ###
+
 # Ignore duplicate commands and commands starting with a space for Bash history
 HISTCONTROL=ignoredups:ignorespace
-
-# append to the history file, don't overwrite it
-shopt -s histappend
 
 # Bash History file size
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+
+### SHELL OPTIONS ###
+
+# fix text wrap based on windows size
 shopt -s checkwinsize
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# entering directory name will automatically cd to it.
+shopt -s autocd
+
+# make multiline input single line in history (i.e. \)
+shopt -s cmdhist
+
+
+### ALIASES ###
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -38,6 +51,13 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# IP
+alias ipme='wget -qO - icanhazip.com'
+alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
+alias netlist='lsof -i -nP'
+
+### SHELL SETTINGS ###
+
 # Bash Prompt
 PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[31;1m\]\w\[\033[m\]\$ "
 
@@ -47,11 +67,7 @@ export EDITOR=vim
 export BROWSER=firefox
 
 
-# IP
-alias ipme='wget -qO - icanhazip.com'
-alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
-alias netlist='lsof -i -nP'
-
+### FUNCTIONS ###
 
 # Easy Extract
 extract () {
