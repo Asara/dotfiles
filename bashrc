@@ -66,6 +66,7 @@ PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[31;
 
 # Export environmental variables
 export EDITOR=vim
+export VISUAL=vim
 export BROWSER=firefox
 
 
