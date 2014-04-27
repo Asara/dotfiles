@@ -1,6 +1,8 @@
 #
-# ~/.bashrc
-#
+# Asara's bashrc
+# 
+
+
 # Check if the shell is non-interactive
 if [[ $- != *i* ]] ; then
 	# Shell is non-interactive.  Be done now!
