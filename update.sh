@@ -2,7 +2,7 @@
 if command -v 'pacman' >/dev/null $$ [[ $?==0 ]]; then
     alias distro='echo Arch'
     alias install='yaourt -S '
-    alias fupdate='echo "Updating system" && yaourt -Syyua --devel && echo "Cleaning" && sudo pacman -Rs $(pacman -Qtdq))'
+    alias fupdate='echo "Updating system" && yaourt -Syyua --devel && echo "Cleaning" && sudo pacman -Rs $(pacman -Qtdq)'
     alias search='yaourt -Ss '
     alias paccache='paccache -rv'
 fi
