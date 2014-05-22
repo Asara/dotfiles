@@ -98,3 +98,6 @@ extract () {
 if [[ -f ~/.customrc ]]; then
     . ~/.customrc
 fi
+if [[ -f ~/.update ]]; then
+    . ~/.customrc
+fi
