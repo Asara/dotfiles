@@ -27,7 +27,7 @@ fi
 if command -v 'emerge' >/dev/null && [[ $?==0 ]]; then
     alias distro='echo Gentoo'
     alias install='sudo emerge -av '
-    alias fupdate='echo -e "Updating ports" && sudo emerge-webrsync && echo -e "Updating system\n\n\n" && sudo emerge --update --deep --with-bdeps=y --newuse --ask @world && echo -e "Cleaning \n\n\n" && sudo emerge --depclean'
+    echo -e "Updating ports \n\n\n" && sudo emerge-webrsync && echo -e "Updating system\n\n\n" && sudo emerge --update --deep --with-bdeps=y --newuse --ask @world && echo "Rebuilding preserved" && sudo emerge @preserved-rebuild && echo -e "Cleaning \n\n\n" && sudo emerge --depclean
     alias search='emerge --search '
 fi
 
