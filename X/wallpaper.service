@@ -1,0 +1,10 @@
+[Unit]
+Description=Sets wallpaper across slim/i3/i3lock
+Before=slim.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/USER/.wallpaper.sh
+
+[Install]
+WantedBy=multi-user.target
