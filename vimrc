@@ -21,3 +21,9 @@ inoremap jk <esc>
 
 colorscheme elflord
 
+
+set colorcolumn=80
+:hi ColorColumn ctermbg=blue
+
+:hi ExtraWhitespace ctermbg=blue
+:match ExtraWhitespace /\s\+$\| \+\ze\t/
