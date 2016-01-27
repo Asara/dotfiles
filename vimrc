@@ -22,7 +22,7 @@ inoremap jk <esc>
 colorscheme elflord
 
 
-set colorcolumn=80
+set colorcolumn=81
 :hi ColorColumn ctermbg=blue
 
 :hi ExtraWhitespace ctermbg=blue
