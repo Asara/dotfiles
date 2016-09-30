@@ -102,4 +102,4 @@ if [[ -f ~/.update ]]; then
     . ~/.update
 fi
 
-source ~/.motd
+bash ~/.motd
