@@ -8,6 +8,14 @@ fc-cache -fv
 
 git clone https://git.minhas.io/Asara/nvim ${HOME}/.config/nvim
 
+go install github.com/jesseduffield/lazygit@latest
+
+sudo apt install \
+	ripgrep \
+	fd-find \
+	python3-neovim \
+	python3-pynvim
+
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
 sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
